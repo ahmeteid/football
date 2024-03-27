@@ -41,6 +41,8 @@ a {
     background-position-y: center;
     background-attachment: fixed;
     height: 100vh;
+    animation: e-change-background 10s linear infinite;
+    -webkit-animation: e-change-background 10s linear infinite;
 }
 
 .header::before {
@@ -172,7 +174,7 @@ a {
 .header .header-content .empty-div {
     position: relative;
     flex: 1;
-    background-image: url(../images/player.jpg);
+    /* background-image: url(../images/player.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -182,7 +184,7 @@ a {
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+    -o-border-radius: 12px; */
 }
 
 
@@ -739,6 +741,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 30px;
 }
 
 .matches-section .container .row .next-match .v-teams .vs-span span {
@@ -810,6 +813,12 @@ a {
     height: 465px;
 }
 
+@media (max-width: 767px) {
+    .matches-section .container .row .team {
+        margin-bottom: 30px;
+    }
+}
+
 .matches-section .container .row .team .c-table thead tr th {
     background-color: #0089d0;
     color: var(--text-color);
@@ -851,13 +860,15 @@ a {
 /* Start Footer */
 footer {
     background-color: #193d62;
-}
-
-footer .container {
-    margin-bottom: 0;
     min-height: 50vh;
     padding-top: 100px;
     text-align: center;
+    margin-bottom: 0;
+}
+
+footer .container {
+    margin: 30px auto;
+    margin-bottom: 0;
 }
 
 footer .container .row {
